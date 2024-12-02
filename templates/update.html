@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body %}
+    
+<form action="/update/{{todo.id}}" method="POST" class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
+    <div class="col-12">
+      <div data-mdb-input-init class="form-outline">
+        <input type="text" id="form1" name="title" class="form-control" value="{{todo.title}}" placeholder="Enter a task title here"/>
+      </div>
+      <div data-mdb-input-init class="form-outline">
+        <input type="text" id="form2" name="desc" class="form-control" value="{{todo.desc}}" placeholder="Description"/>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Save</button>
+    </div>
+  </form>
+
+
+{% endblock body %}
+
+
